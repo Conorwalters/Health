@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+
+  example:
+    container_name: HealthApp
+    build:
+      context: .
+      dockerfile: ../Dockerfile
+    volumes:
+      - '.:/ConsumeAspNetWebApi'
+      - '/ConsumeAspNetWebApi/node_modules'
+    ports:
+      - '1000:1001'

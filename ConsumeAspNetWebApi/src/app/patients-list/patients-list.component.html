@@ -1,0 +1,35 @@
+<div class="container custom-container-2">
+  <!-- Show it when there is no patient -->
+  <div class="no-data text-center" *ngIf="patient === null">
+    <p>There is no patient added yet!</p>
+    <button class="btn btn-outline-primary" routerLink="/create-patient">Add Empoyee</button>
+  </div>
+
+  <!-- Employees list table, it hides when there is no patient -->
+  <div >
+    <h3 class="mb-3 text-center">Patient List</h3>
+    <div class="col-md-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Medication Name</th>
+              <th scope="col">Medication Doses</th>
+              <th scope="col">Ailment Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let pat of patient">
+              <td>{{pat.name}}</td>
+              <td>{{pat.medications[0].name}}</td>
+              <td>{{pat.medications[0].doses}}</td>
+              <td>{{pat.ailments[0].name}}</td>
+            </tr>
+          </tbody>
+        </table>
+      <button class='btn btn-success btn-lg btn-block' routerLink="/create-patient">Create a new Patient</button>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,25 @@
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #00FF66;
+}
+
+tr:nth-child(even) {
+    background-color: #505050;
+}
+
+tr:nth-child(even):hover {
+    background-color: #00FF66;
+}
+
+thead {
+    background-color: #218838;
+}
+tbody {
+    background-color: #218838;
+    position: relative;
+    max-height: 350px;
+    overflow-y: scroll;
+}
